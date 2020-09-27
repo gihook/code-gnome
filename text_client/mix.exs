@@ -5,7 +5,7 @@ defmodule TextClient.MixProject do
     [
       app: :text_client,
       version: "0.1.0",
-      elixir: "~> 1.10",
+      elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -13,6 +13,7 @@ defmodule TextClient.MixProject do
 
   def application do
     [
+      included_applications: [:hangman],
       extra_applications: [:logger]
     ]
   end
